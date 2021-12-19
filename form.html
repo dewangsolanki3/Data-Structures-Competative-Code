@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="form" action="" method="">
+        <input type="text" name="item" id="item" placeholder="Enter New Item">
+        <input type="text" name="qty" id="qty" placeholder="Enter Quantity" >
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+
+        let form = document.getElementById("form")
+        form.addEventListener("change", (e) => {        //change
+            e.preventDefault()
+            e.target.style.backgroundColor = "red"
+            console.log(e.target.value)
+        })
+
+    </script>
+    
+</body>
+</html>

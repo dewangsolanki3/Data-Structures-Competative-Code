@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+</head>
+<body>
+    
+    <h1>You Searched For : </h1>
+        <% data.map( food => { %>
+            <h4> <%= food.item %> </h4> <h5> <%= food.qty %></h5>
+        <% }) %> 
+    </h1>
+
+    <form id="form" action="/save" method="post">
+        <input type="text" name="item" id="item" placeholder="Enter New Item">
+        <input type="text" name="qty" id="qty" placeholder="Enter Quantity" >
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+
+
+    <script>
+
+const form = document.getElementById("form")
+const data1 = document.getElementById("item")
+const data2 = document.getElementById("qty")
+
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault()
+//     console.log(data1.value)
+//     console.log(data2.value)
+
+
+
+//     axios.post('/save', {
+//     item: 'Fred',
+//     qty: 20,
+//     headers: {
+//    'Content-Type': 'application/json'
+//     }
+//   })
+//   .then(function (response) {
+//     console.log(response);
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
+
+
+    // axios.post('/save', {
+    //     item: data1.value,
+    //     qty: data2.value
+    //     })
+    //     .then(res => console.log(res))
+
+    //  })
+
+// axios.get('https://dog.ceo/api/breeds/image/random')
+        //     .then( response => { 
+        //         let food = response.data 
+        //         console.log(food)
+
+        //         document.getElementsByTagName('h1').innerHTML = food
+        //     })
+        //     .catch( error => {console.log(error)})
+
+
+    </script>
+
+
+    <script src="ejs.min.js"></script>
+</body>
+</html>

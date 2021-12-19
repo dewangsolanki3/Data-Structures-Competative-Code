@@ -1,0 +1,27 @@
+[
+    {
+        "item":"Bread",
+        "qty":1
+    },
+
+    {
+        "item":"Banana",
+        "qty":5
+    },
+
+    {
+        "item":"Chocolate",
+        "qty":3
+    },
+
+    {
+        "item":"Chips",
+        "qty":2
+    },
+
+    {
+        "item":"Eggs",
+        "qty":3
+    }
+    
+]

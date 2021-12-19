@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        img{
+            height: 500px;
+            width: 300px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>hello</h1>
+    </div>
+    <div id="header"></div>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+
+
+
+
+
+    let url  = "https://dog.ceo/api/breeds/image/random/10"
+    let mydiv = document.getElementById("container")
+
+    let getImages = () => {            
+        axios.get(url)
+            .then( res => {
+                res.data.message.map( imgUrl => {
+                    let img = document.createElement("img")
+                    img.src = imgUrl
+                    mydiv.appendChild(img)}                    
+                )  
+            })
+    }
+
+    getImages()
+
+    window.addEventListener("scroll", () => {
+        if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 500){    // -500px for early scroll before reaching bottom 
+            getImages()
+        }
+    })
+
+
+    </script>
+</body>
+</html>
